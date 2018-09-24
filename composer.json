@@ -1,0 +1,14 @@
+{
+	"name": "denis/project-lvl1-s348",
+	"description": "hexlet: brain-games",
+	"authors": [
+		{
+			"name": "aic513",
+			"email": "aic513@mail.ru"
+		}
+	],
+	"require": {},
+	"bin": [
+		"bin/brain-games"
+	]
+}
