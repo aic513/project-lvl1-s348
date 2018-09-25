@@ -1,0 +1,14 @@
+{
+	"name": "den/brain-games",
+	"description": "first project in hexlet",
+	"authors": [
+		{
+			"name": "aic513",
+			"email": "aic513@mail.ru"
+		}
+	],
+	"bin": [
+		"bin/brain-games"
+	],
+	"require": {}
+}
