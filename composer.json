@@ -7,8 +7,8 @@
 			"email": "aic513@mail.ru"
 		}
 	],
-	"require": {},
 	"bin": [
 		"bin/brain-games"
-	]
+	],
+	"require": {}
 }
