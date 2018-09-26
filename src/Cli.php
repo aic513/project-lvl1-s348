@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: denis
- * Date: 26.09.18
- * Time: 0:43
- */
 
 namespace BrainGames\Cli;
 
