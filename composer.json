@@ -23,5 +23,11 @@
 	},
 	"require": {
 		"wp-cli/php-cli-tools": "dev-master"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "*"
+	},
+	"scripts": {
+		"phpcs": "phpcs"
 	}
 }
