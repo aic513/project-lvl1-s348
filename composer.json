@@ -10,6 +10,12 @@
 	"bin": [
 		"bin/brain-games"
 	],
+	"keywords": [
+		"hexlet",
+		"brain games",
+		"first task",
+		"aic513"
+	],
 	"autoload": {
 		"files": [
 			"src/Cli.php"
