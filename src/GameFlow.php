@@ -37,4 +37,3 @@ function gameLogic($infoAboutGame)
 
     return true;
 }
-
