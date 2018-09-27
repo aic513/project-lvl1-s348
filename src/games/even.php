@@ -5,7 +5,7 @@ namespace BrainGames\Games;
 use function \cli\line;
 use function \cli\prompt;
 
-define('COUNT_ANSWERS', 3);
+const COUNT_ANSWERS = 3;
 
 function run()
 {
@@ -15,28 +15,28 @@ function run()
     line("Hello, %s!", $name);
 
     for ($i = 1; $i <= COUNT_ANSWERS; $i++) {
-        $number = rand(1, 1000);
-        line("Question:{$number}");
+        $question = rand(1, 1000);
+        line("Question:{$question}");
         $answer = prompt('Your answer');
-        checkAnswer($number, $answer, $name);
+        if (($question % 2 === 0 && $answer === "yes") || ($question % 2 !== 0 && $answer === "no")) {
+            line('Correct!' . PHP_EOL);
+        } else {
+            line();
+            getAnswer($question);
+            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'', $answer, getAnswer($question));
+            line('Let\'s try again, %s!', $name);
+            return;
+        }
+        line('Congratulations, %s!', $name);
     }
 }
 
-function checkAnswer($number, $answer, $name)
+function isEven($number)
 {
-    if (($number % 2 === 0 && $answer === "yes") || ($number % 2 !== 0 && $answer === "no")) {
-        line('Correct!' . PHP_EOL);
-    } else {
-        line();
-        isAnswerRight($number);
-        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'', $answer, isAnswerRight($number));
-        line('Let\'s try again, %s!', $name);
-        exit();
-    }
-    line('Congratulations, %s!', $name);
+    return ($number % 2 === 0) ? true : false;
 }
 
-function isAnswerRight($number)
+function getAnswer($question)
 {
-    return ($number % 2) === 0 ? "yes" : "no";
+    return isEven($question) ? "yes" : "no";
 }
