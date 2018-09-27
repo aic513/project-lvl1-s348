@@ -4,6 +4,6 @@ Voice of zero task - https://asciinema.org/a/gdefQySU9FR7jjG2nTrcq7sQo
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ba6235ad155886bfc371/test_coverage)](https://codeclimate.com/github/aic513/project-lvl1-s348/test_coverage)
 
-[![Build Status](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source.svg?branch=master)](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source)
+[![Build Status](https://travis-ci.org/aic513/project-lvl1-s348.svg?branch=master)](https://travis-ci.org/aic513/project-lvl1-s348)
 
 Voice of fourth task - https://asciinema.org/a/nyPUXQitHqSg4kshOM7WsLVSw
