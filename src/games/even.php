@@ -1,42 +1,27 @@
 <?php
 
-namespace BrainGames\Games;
+namespace BrainGames\Games\Even;
 
-use function \cli\line;
-use function \cli\prompt;
+use function BrainGames\Flow\gameFlow;
 
-const COUNT_ANSWERS = 3;
+const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".';
 
 function run()
 {
-    line('Welcome to the Brain Games!');
-    line('Answer "yes" if number even otherwise answer "no".' . PHP_EOL);
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
 
-    for ($i = 1; $i <= COUNT_ANSWERS; $i++) {
-        $question = rand(1, 1000);
-        line("Question:{$question}");
-        $answer = prompt('Your answer');
-        if (($question % 2 === 0 && $answer === "yes") || ($question % 2 !== 0 && $answer === "no")) {
-            line('Correct!' . PHP_EOL);
-        } else {
-            line();
-            getAnswer($question);
-            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'', $answer, getAnswer($question));
-            line('Let\'s try again, %s!', $name);
-            return;
-        }
-        line('Congratulations, %s!', $name);
-    }
-}
+    $isEven = function ($number) {
+        return $number % 2 === 0;
+    };
+    $getAnswer = function ($question) use ($isEven) {
+        return $isEven($question) ? 'yes' : 'no';
+    };
 
-function isEven($number)
-{
-    return ($number % 2 === 0) ? true : false;
-}
+    $infoAboutGame = function () use ($getAnswer) {
+        $question = rand(1, 100);
+        $result = [$question, $getAnswer($question)];
 
-function getAnswer($question)
-{
-    return isEven($question) ? "yes" : "no";
+        return $result;
+    };
+
+    gameFlow(DESCRIPTION, $infoAboutGame);
 }
