@@ -10,7 +10,8 @@
 	"bin": [
 		"bin/brain-games",
 		"bin/brain-even",
-		"bin/brain-calc"
+		"bin/brain-calc",
+		"bin/brain-gcd"
 	],
 	"keywords": [
 		"hexlet",
@@ -23,6 +24,7 @@
 			"src/Cli.php",
 			"src/games/even.php",
 			"src/games/calc.php",
+			"src/games/gcd.php",
 			"src/bootstrap.php",
 			"src/GameFlow.php"
 		]
