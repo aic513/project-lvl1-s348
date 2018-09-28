@@ -18,7 +18,8 @@ function run()
 
     $infoAboutGame = function () use ($getAnswer) {
         $question = rand(1, 100);
-        $result = [$question, $getAnswer($question)];
+        $answer = $getAnswer($question);
+        $result = [$question, $answer];
 
         return $result;
     };
