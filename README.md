@@ -10,3 +10,5 @@ Voice of fourth task - https://asciinema.org/a/nyPUXQitHqSg4kshOM7WsLVSw
 
 Voice of fifth task - https://asciinema.org/a/Tj0WjaCEN6Izh10YJceB8Kgqd
 
+Voice of sixth task - https://asciinema.org/a/KACkmp3PZ2dQX8TqAmq11EHAD
+
