@@ -11,7 +11,8 @@
 		"bin/brain-games",
 		"bin/brain-even",
 		"bin/brain-calc",
-		"bin/brain-gcd"
+		"bin/brain-gcd",
+		"bin/brain-balance"
 	],
 	"keywords": [
 		"hexlet",
@@ -24,6 +25,7 @@
 			"src/Cli.php",
 			"src/games/even.php",
 			"src/games/calc.php",
+			"src/games/balance.php",
 			"src/games/gcd.php",
 			"src/bootstrap.php",
 			"src/GameFlow.php"
