@@ -13,7 +13,8 @@
 		"bin/brain-calc",
 		"bin/brain-gcd",
 		"bin/brain-balance",
-		"bin/brain-progression"
+		"bin/brain-progression",
+		"bin/brain-prime"
 	],
 	"keywords": [
 		"hexlet",
@@ -28,6 +29,7 @@
 			"src/games/calc.php",
 			"src/games/balance.php",
 			"src/games/progression.php",
+			"src/games/prime.php",
 			"src/games/gcd.php",
 			"src/bootstrap.php",
 			"src/GameFlow.php"
