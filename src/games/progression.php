@@ -5,34 +5,37 @@ namespace BrainGames\Games\Progression;
 use function BrainGames\Flow\gameFlow;
 
 const DESCRIPTION = 'What number is missing in this progression?';
+const LENGTH_OF_PROGRESSION = 10;
 
 function run()
 {
+    $getQuestion = function ($progression, $missingIndex) {
+        $question = $progression;
+        $question[$missingIndex] = '..';
 
-    $balance = function ($number) {
-        $numberToString = (string)$number;
-        $stringLength = strlen($numberToString);
-        $sum = array_sum(str_split($numberToString));
-        $min = floor($sum / $stringLength);
-        $balance = $sum % $stringLength;
-        $result = '';
-        for ($i = 1; $i <= $stringLength; $i++) {
-            if ($balance > 0) {
-                $current = $min + 1;
-            } else {
-                $current = $min;
-            }
-            $balance--;
-            $result = $current . $result;
-        }
-
-        return $result;
+        return implode(' ', $question);
     };
-    $infoAboutGame = function () use ($balance) {
-        $question = rand(10, 9999);
-        $answer = $balance($question);
 
-        return ["$question", $answer];
+    $getProgression = function () {
+        $startNumber = rand(1, 30);
+        $step = rand(2, 10);
+        $endNumber = ($startNumber - $step) + $step * LENGTH_OF_PROGRESSION;
+
+        return range($startNumber, $endNumber, $step);
     };
-    gameFlow(DESCRIPTION, $infoAboutGame);
+
+    $generateGameData = function () use ($getQuestion, $getProgression) {
+        $progression = $getProgression();
+        $missingIndex = array_rand($progression);
+        $question = $getQuestion($progression, $missingIndex);
+        $answer = $progression[$missingIndex];
+
+        return [$question, $answer];
+    };
+
+    gameFlow(DESCRIPTION, $generateGameData);
 }
+
+
+
+

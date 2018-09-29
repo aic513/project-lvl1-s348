@@ -27,7 +27,7 @@ function gameLogic($infoAboutGame)
         list($question, $rightAnswer) = $gameData;
         line("Question: " . $question);
         $answer = prompt('Your answer');
-        if ($answer !== $rightAnswer) {
+        if ($answer != $rightAnswer) {
             line("'$answer' is wrong answer ;(. Correct answer was '$rightAnswer'.");
 
             return false;
