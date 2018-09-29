@@ -5,11 +5,12 @@ namespace BrainGames\Games\Calc;
 use function BrainGames\Flow\gameFlow;
 
 const DESCRIPTION = 'What is the result of the expression?';
-const OPERATIONS = ['addition', 'subtraction', 'multiplication'];
+const
+OPERATIONS = ['addition', 'subtraction', 'multiplication'];
 
 function run()
 {
-    $getGameData = function () {
+    $generateGameData = function () {
         $operation = OPERATIONS[rand(0, 2)];
         $first = rand(1, 100);
         $second = rand(1, 100);
@@ -22,5 +23,6 @@ function run()
                 return ["$first * $second", $first * $second];
         }
     };
-    gameFlow(DESCRIPTION, $getGameData);
+
+    gameFlow(DESCRIPTION, $generateGameData);
 }

@@ -1,17 +1,18 @@
 <?php
 
-namespace BrainGames\Games\Balance;
+namespace BrainGames\Games\Progression;
 
 use function BrainGames\Flow\gameFlow;
 
-const DESCRIPTION = 'Balance the given number.';
+const DESCRIPTION = 'What number is missing in this progression?';
 
 function run()
 {
+
     $balance = function ($number) {
-        $numberAsString = (string)$number;
-        $stringLength = strlen($numberAsString);
-        $sum = array_sum(str_split($numberAsString));
+        $numberToString = (string)$number;
+        $stringLength = strlen($numberToString);
+        $sum = array_sum(str_split($numberToString));
         $min = floor($sum / $stringLength);
         $balance = $sum % $stringLength;
         $result = '';
@@ -27,13 +28,11 @@ function run()
 
         return $result;
     };
-
-    $generateGameData = function () use ($balance) {
+    $infoAboutGame = function () use ($balance) {
         $question = rand(10, 9999);
         $answer = $balance($question);
 
         return ["$question", $answer];
     };
-
-    gameFlow(DESCRIPTION, $generateGameData);
+    gameFlow(DESCRIPTION, $infoAboutGame);
 }

@@ -15,7 +15,7 @@ function run()
 
         return 0 === $remainder ? $small : $gcd($small, $remainder);
     };
-    $infoAboutGame = function () use ($gcd) {
+    $generateGameData = function () use ($gcd) {
         $first = rand(1, 100);
         $second = rand(1, 100);
 
@@ -25,5 +25,5 @@ function run()
         return [$question, $answer];
     };
 
-    gameFlow(DESCRIPTION, $infoAboutGame);
+    gameFlow(DESCRIPTION, $generateGameData);
 }
