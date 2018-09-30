@@ -22,7 +22,7 @@ function run()
         $question = "{$first} {$second}";
         $answer = $gcd($first, $second);
 
-        return [$question, $answer];
+        return [$question, (string)$answer];
     };
 
     gameFlow(DESCRIPTION, $generateGameData);

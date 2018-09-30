@@ -30,7 +30,7 @@ function run()
 
     $generateGameData = function () use ($balance) {
         $question = rand(10, 9999);
-        $answer = $balance($question);
+        $answer = (string)$balance($question);
 
         return ["$question", $answer];
     };
