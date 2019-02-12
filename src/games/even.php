@@ -17,7 +17,7 @@ function run()
     };
 
     $generateGameData = function () use ($getAnswer) {
-        $question = rand(1, 100);
+        $question = mt_rand(1, 100);
         $answer = $getAnswer($question);
         $result = [$question, $answer];
 
