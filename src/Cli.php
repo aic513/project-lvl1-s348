@@ -19,5 +19,5 @@ function greeting()
 function nameAsking()
 {
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    line('Hello, %s!', $name);
 }

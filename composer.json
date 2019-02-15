@@ -14,6 +14,7 @@
 		"bin/brain-gcd",
 		"bin/brain-balance",
 		"bin/brain-progression",
+		"bin/brain-true-progression",
 		"bin/brain-prime"
 	],
 	"keywords": [
@@ -29,6 +30,7 @@
 			"src/games/calc.php",
 			"src/games/balance.php",
 			"src/games/progression.php",
+			"src/games/tru_progression.php",
 			"src/games/prime.php",
 			"src/games/gcd.php",
 			"src/bootstrap.php",
@@ -39,7 +41,8 @@
 		"wp-cli/php-cli-tools": "*"
 	},
 	"require-dev": {
-		"squizlabs/php_codesniffer": "*"
+		"squizlabs/php_codesniffer": "*",
+		"symfony/var-dumper": "^4.0"
 	},
 	"scripts": {
 		"phpcs": "phpcs"

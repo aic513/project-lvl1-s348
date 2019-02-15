@@ -25,8 +25,8 @@ function run()
     };
 
     $generateGameData = function () use ($getQuestion, $getProgression) {
-        $startNumber = rand(MIN_START_NUMBER, MAX_START_NUMBER);
-        $step = rand(MIN_STEP_NUMBER, MAX_STEP_NUMBER);
+        $startNumber = mt_rand(MIN_START_NUMBER, MAX_START_NUMBER);
+        $step = mt_rand(MIN_STEP_NUMBER, MAX_STEP_NUMBER);
         $endNumber = ($startNumber - $step) + $step * LENGTH_OF_PROGRESSION;
         $progression = $getProgression($startNumber, $step, $endNumber);
         $missingIndex = array_rand($progression);
